@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Panels 💪</title>
+  <link href='output.css' rel='stylesheet'>
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <div class="flex justify-center h-screen w-screen bg-yellow-200 min-h-screen ">
+    <div class="items-center h-full flex-1 flex flex-col  justify-center bg-cover bg-center click-open" style="background-image: url('https://source.unsplash.com/gYl-UtwNg_I/1500x1500');"
+   >
+      <p>Hey</p>
+      <p>Let's</p>
+      <p>Dance</p>
+    </div>
+    <div class="items-center h-full flex-1 flex flex-col justify-center bg-cover bg-center click-open" style="background-image: url('https://source.unsplash.com/rFKUFzjPYiQ/1500x1500');"
+   >
+      <p>Give</p>
+      <p>Take</p>
+      <p>Receive</p>
+    </div>
+    <div class="items-center h-full flex-1 flex flex-col justify-center bg-cover bg-center click-open" style="background-image: url('https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d');"
+   >
+      <p>Experience</p>
+      <p>It</p>
+      <p>Today</p>
+    </div>
+    <div class="items-center h-full flex-1 flex flex-col justify-center bg-cover bg-center click-open" style="background-image: url('https://source.unsplash.com/ITjiVXcwVng/1500x1500');">
+      <p>Give</p>
+      <p>All</p>
+      <p>You can</p>
+    </div>
+    <div class="items-center h-full flex-1 flex flex-col justify-center bg-cover bg-center click-open" style="background-image: url('https://source.unsplash.com/3MNzGlQM7qs/1500x1500');">
+      <p>Life</p>
+      <p>In</p>
+      <p>Motion</p>
+    </div>
+  </div>
+
+  <script>
+    const clickOpenElements = document.querySelectorAll('.click-open');
+    let lastClickedElement = null;
+
+    clickOpenElements.forEach(element => {
+      element.addEventListener('click', function() {
+        // Remove "active" class from the last clicked element, if any
+        if (lastClickedElement) {
+          lastClickedElement.classList.remove('active');
+        }
+
+        // Add "active" class to the currently clicked element
+        this.classList.add('active');
+
+        // Set the currently clicked element as the last clicked element
+        lastClickedElement = this;
+      });
+    });
+  </script>
+
+</body>
+</html>
