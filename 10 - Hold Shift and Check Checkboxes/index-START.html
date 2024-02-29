@@ -50,6 +50,12 @@
       font-weight: 200;
       border-left: 1px solid #D1E2FF;
     }
+
+    .refresh {
+      width: 100px;
+      height: 30px;
+      background-color: white;
+    }
   </style>
    <!--
    The following is a common layout you would see in an email client.
@@ -94,6 +100,7 @@
       <input type="checkbox">
       <p>Don't forget to tweet your result!</p>
     </div>
+    <button class="refresh" id="button">Refresh</button>
   </div>
 
 <script>
@@ -125,18 +132,19 @@
       })
     }
 
-    // for( let i=0; i<checkboxes.length; i++){
-    //   if(lastChecked !== null){
-    //     lastChecked = checkboxes[i];
-    //     // all the boxes in between being checked
-    //   }
-    //   return lastChecked;
-    // }
-
     lastChecked = this;
   }
 
+  // refresh button to unchecked all the checkboxes
+  const button = document.getElementById('button');
+
+  function onSubmit(){
+    checkboxes.forEach(checkbox => {checkbox.checked = false});
+  }
+  button.addEventListener('click', onSubmit);
+
   checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+
 </script>
 </body>
 </html>
