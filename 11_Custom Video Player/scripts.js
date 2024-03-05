@@ -5,15 +5,13 @@ const progressBar = player.querySelector('.progress__filled');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const video = player.querySelector('.viewer');
 const ranges = player.querySelectorAll('.player__slider');
-// const controller = player.querySelector(
-// )
+const fullScreenIcon = player.querySelector('.icon');
 
 // a button to play and pause
 function togglePlay(){
 
     const method = video.paused ? 'play' : 'pause';
     video[method]();
-
 }
 
 function updateBtn (){
@@ -78,6 +76,7 @@ ranges.forEach(range => range.addEventListener('change', handleRangeUpdate));
 ranges.forEach(range => range.addEventListener('mousemove', handleRangeUpdate));
 
 // get in and out of full screen
+
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();

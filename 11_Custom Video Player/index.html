@@ -9,7 +9,8 @@
 <body>
 
    <div class="player">
-     <video class="player__video viewer" src="652333414.mp4"></video>
+    <video class="player__video viewer" src="video.mp4">
+     </video>
 
      <div class="player__controls">
        <div class="progress">
@@ -29,7 +30,7 @@
 
        <button data-skip="-10" class="player__button">« 10s</button>
        <button data-skip="25" class="player__button">25s »</button>
-       <button class="player__button"><img src="switch-to-full-screen-button.png"></button>
+       <button class="player__button" onclick="toggleFullScreen()"><img src="switch-to-full-screen-button.png"></button>
      </div>
    </div>
 
